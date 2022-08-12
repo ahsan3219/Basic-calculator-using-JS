@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+
+<body>
+
+    <form onsubmit=" doSum(); return false">
+        num1:a <input id="a" type="text" required>
+        <br>
+        num2:b <input id="b" type="text" required>
+        <br>
+        <button type="submit">Submit</button>
+     
+    <h2>Sum A and B =
+        <h3 id="result1"></h3>
+    </h2>
+
+
+    <h2>Sub A and B =
+        <h3 id="result2"></h3>
+    </h2>
+
+    <h2> Multiply A and B =
+        <h3 id="result3"></h3>
+    </h2>
+
+    <h2> The Division of A and B =
+        <h3 id="result4"></h3>
+    </h2>
+
+
+    <h2> The Modulus of A and B =
+        <h3 id="result5"></h3>
+    </h2>
+
+
+    
+    <h2> The Power of A is B =
+        <h3 id="result6"></h3>
+    </h2>
+
+
+</form>
+
+
+    <script>
+        function doSum() {
+            let firstNumber = Number(document.querySelector("#a").value)
+            let secondNumber = Number(document.querySelector("#b").value)
+            let result1 = firstNumber + secondNumber;
+            console.log(result1)
+            document.querySelector("#result1").innerHTML = result1;
+        
+            let result2 = firstNumber - secondNumber;
+            console.log(result2)
+            document.querySelector("#result2").innerHTML = result2;
+            
+            let result3 = firstNumber * secondNumber;
+            console.log(result3)
+            document.querySelector("#result3").innerHTML = result3;
+            
+            let result4 = firstNumber / secondNumber;
+            console.log(result4)
+            document.querySelector("#result4").innerHTML = result4;
+            
+            
+            let result5 = firstNumber % secondNumber;
+            console.log(result5)
+            document.querySelector("#result5").innerHTML = result5;
+            
+            let result6 = firstNumber ** secondNumber;
+            console.log(result6)
+            document.querySelector("#result6").innerHTML = result6;
+        
+        
+        
+        
+        }
+    </script>
+</body>
+
+</html>
